@@ -40,20 +40,32 @@ app.post('/users', async (req, res) => {
 
 //Put更新用戶
 app.put('/users/:id', async function (req, res) {
+    const updatedFields = {}; // 創建一個空物件來存儲要更新的欄位
+    
+    // 檢查並將用戶輸入的欄位添加到要更新的物件中
+    if (req.body.username2v) {
+        updatedFields.username = req.body.username2v;
+    }
+    if (req.body.age2v) {
+        updatedFields.age = req.body.age2v;
+    }
+    if (req.body.email2v) {
+        updatedFields.email = req.body.email2v;
+    }
+    
     await User.findOneAndUpdate(
         { 
             "_id": req.params.id, //req.params.id 的值，因為它是在路由中 :id 的位置提供的值。
         }, // 條件，選擇要更新的文檔 
-        { $set: { 
-            "username": req.body.username2v,
-            "age": req.body.age2v, // 更新年齡
-            "email": req.body.email2v // 更新email
-        }}, 
+        { $set: 
+            updatedFields // 使用包含有輸入值的欄位的物件進行更新
+        }, 
         { new: true } // 選項，返回更新後的文檔
     )
     .then(updatedUser => {
         // ...處理更新後的用戶
         console.log('更新後的用戶：', updatedUser);
+        console.log('updatedFields', updatedFields);
         res.status(201).json(updatedUser);
     })
     .catch(error => {
