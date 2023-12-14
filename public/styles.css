@@ -82,9 +82,21 @@ h3 {
   text-align: center;
 }
 
-h4 {
+span {
   text-align: left;
   word-wrap: break-word; /* 自動換行 */
+}
+
+span#find_OneOrAll_toggle {
+  font-size: 1.1em; /* 调整字体大小 */
+  font-weight: bold; /* 加粗字体 */
+  color: #333; /* 文本颜色 */
+}
+
+/* 悬停效果 */
+span#find_OneOrAll_toggle:hover,
+h3:hover {
+  background-color: #ddd; /* 悬停时的背景颜色 */
 }
 
 div[type="value1"] {
@@ -94,6 +106,9 @@ div[type="value1"] {
   left: 1%; /* 將元素的左側定位在視窗的中間位置 */
   border: 1px dashed rgb(78, 117, 245);
   max-width: 100%; /* 設定最大寬度為視窗寬度的80% */
+  background-color: rgb(247, 199, 137);
+  padding: 1px;
+  border-radius: 5px; /* 圆角边框 */
 }
 /* 根據您的需求調整其他部分的樣式 */
 
