@@ -85,6 +85,7 @@ h3 {
 span {
   text-align: left;
   word-wrap: break-word; /* 自動換行 */
+  white-space: pre-line;
 }
 
 span#find_OneOrAll_toggle {
@@ -117,7 +118,7 @@ div[type="value1"] {
 @media screen and (max-width: 767px) {
   /* 在螢幕寬度小於 767px 時使用以下 CSS 規則 */
   body {
-      font-size: 0.9em;
+      font-size: 0.8em;
       background-color: #c1f6fa;
   }
 }

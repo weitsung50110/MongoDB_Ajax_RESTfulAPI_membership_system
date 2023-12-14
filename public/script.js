@@ -99,13 +99,21 @@ document.getElementById('delete').addEventListener('click', async function(event
 //Get個別別用戶
 document.getElementById('find_one_btn').addEventListener('click', async function(event) {
     event.preventDefault(); // 阻止表單默認提交行為
+    let userText = ''; // 用于保存所有用户信息的字符串
     await fetch(`/users/${document.getElementById('find_one_id').value}`)
         .then((response) => {
                 return response.json();
         })
         .then((response) => {
             console.log('New find_one created:',response);
-            document.querySelector("#find_OneOrAll").textContent = JSON.stringify(response);
+
+            // response 是包含多个用户对象的数组，您需要遍历数组来获取每个用户的 属性
+            response.forEach((res_user) => {
+                userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} <br>`;
+                // 将每个用户对象的属性添加到字符串中，使用换行符或其他分隔符分隔每个用户信息
+                document.querySelector("#find_OneOrAll_txt").innerHTML = userText;
+                // 将包含所有用户信息的字符串设置为 textContent
+            });
         })
         .catch((error) => {
                 console.log(`Error花: ${error}`);
@@ -117,13 +125,20 @@ document.getElementById('find_one_btn').addEventListener('click', async function
 document.getElementById('find_all_btn').addEventListener('click', FindUser)
 async function FindUser(event) {
     event.preventDefault(); // 阻止表單默認提交行為
+    let userText = ''; // 用于保存所有用户信息的字符串
     await fetch('/users')
         .then((response) => {
                 return response.json();
         })
         .then((response) => {
             console.log('New Find created:',response);
-            document.querySelector("#find_OneOrAll").textContent = JSON.stringify(response);
+            // response 是包含多个用户对象的数组，您需要遍历数组来获取每个用户的 属性
+            response.forEach((res_user) => {
+                userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} <br>`;
+                // 将每个用户对象的属性添加到字符串中，使用换行符或其他分隔符分隔每个用户信息
+                document.querySelector("#find_OneOrAll_txt").innerHTML = userText;
+                // 将包含所有用户信息的字符串设置为 textContent
+            });
         })
         .catch((error) => {
                 console.log(`Error花: ${error}`);
