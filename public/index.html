@@ -9,56 +9,58 @@
 <body>
   <div class="member_system">
     <h1>Member System Form</h1>
-    <h3 id="error_txt">show up error</h3>
+    <h3 id="error_txt">{{ errorText }}</h3>
 
-    <form id="Posting_userForm">
-      <h3 v-on:click='checked_toggle(0)'>Adding User</h3>
-      <div v-show='checked[0]'>
+    <form id="Posting_userForm" @submit.prevent="addUser">
+      <h3 @click="checked_toggle(0)">Adding User</h3>
+      <div v-show="checked[0]">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter username"><br>
+        <input type="text" id="username" name="username" placeholder="Enter username" v-model="formData.username"><br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter email"><br>
+        <input type="email" id="email" name="email" placeholder="Enter email" v-model="formData.email"><br>
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" placeholder="Enter age"><br>
+        <input type="number" id="age" name="age" placeholder="Enter age" v-model.number="formData.age"><br>
         <input type="submit" value="Submit">
       </div>
     </form>
 
-  <form id="Updating_form">
-    <h3 v-on:click='checked_toggle(1)'>Updating User</h3>
-    <div v-show='checked[1]'>
-      <input type="text" id="userid2" name="userid2" placeholder="Enter userid2"><br>
-      <input type="text" id="username2" name="username2" placeholder="Enter username2"><br>
-      <input type="email" id="email2" name="email2" placeholder="Enter email2"><br>
-      <input type="number" id="age2" name="age2" placeholder="Enter age2"><br>
-      <input type="submit" id="submit2" value="Submit2更新"><br>
-    </div>
-  </form>
+    <form id="Updating_form" @submit.prevent="updateUser">
+      <h3 @click="checked_toggle(1)">Updating User</h3>
+      <div v-show="checked[1]">
+        <input type="text" id="userid2" name="userid2" placeholder="Enter userid2" v-model="formData2v.userid2v"><br>
+        <input type="text" id="username2" name="username2" placeholder="Enter username2" v-model="formData2v.username2v"><br>
+        <input type="email" id="email2" name="email2" placeholder="Enter email2" v-model="formData2v.email2v"><br>
+        <input type="number" id="age2" name="age2" placeholder="Enter age2" v-model.number="formData2v.age2v"><br>
+        <input type="submit" id="submit2" value="Submit2更新"><br>
+      </div>
+    </form>
 
-  <form id="Deleting">
-    <h3 v-on:click='checked_toggle(2)'>Deleting User</h3>
-    <div v-show='checked[2]'>
-      <input type="text" id="delete_id" name="delete_id" placeholder="Enter delete_id"><br>
-      <button id="delete" value="delete">delete</button> <br>
-    </div>
-  </form>
+    <form id="Deleting" @submit.prevent="deleteUser">
+      <h3 @click="checked_toggle(2)">Deleting User</h3>
+      <div v-show="checked[2]">
+        <input type="text" id="delete_id" name="delete_id" placeholder="Enter delete_id" v-model="deleteId"><br>
+        <button id="delete" value="delete">delete</button> <br>
+      </div>
+    </form>
 
-  <form id="Finding_one_and_Finding_all">
-    <h3 v-on:click='checked_toggle(3)'>Finding_one_and_Finding_all User</h3>
-    <div v-show='checked[3]'>
-      <input type="text" id="find_one_id" name="find_one_id" placeholder="Enter find_one_id"><br>
-      <input type="submit" id="find_one_btn" value="find_one_btn"> <!-- find_one -->
-      <input type="submit" id="find_all_btn" value="find_all_btn"> <!-- find_all -->
-    </div>
-  </form>
+    <form id="Finding_one_and_Finding_all" >
+      <h3 @click="checked_toggle(3)">Finding_one_and_Finding_all User</h3>
+      <div v-show="checked[3]">
+        <input type="text" id="find_one_id" name="find_one_id" placeholder="Enter find_one_id" v-model="findOneId"><br>
+        <!-- <input type="submit" id="find_one_btn" value="find_one_btn" @submit.prevent="findOneUser"> -->
+        <!-- <input type="submit" id="find_all_btn" value="find_all_btn" @submit.prevent="findAllUsers">  -->
+        <button @click.prevent="findOneUser" type="button" id="find_one_btn">find_one_btn</button> <!-- find_one -->
+        <button @click.prevent="findAllUsers" type="button" id="find_all_btn">find_all_btn</button><!-- find_all -->
+      </div>
+    </form>
 
-  <div type="value1">
-    <span id="find_OneOrAll_toggle" v-on:click='value1_toggle()'>Finding open</span><br/>
-    <span id="find_OneOrAll_txt" v-show='value1_checked'>find One or All User </span>
+    <div type="value1">
+      <span id="find_OneOrAll_toggle" @click="value1_toggle()">Finding close</span><br/>
+      <span id="find_OneOrAll_txt" v-show="value1_checked">{{ userText }}</span>
+    </div>
   </div>
-</div>
   <!-- 載入vue.js -->
   <script src="vue.js" async></script>
-  <script src="script.js" async></script> 
+  
 </body>
 </html>
