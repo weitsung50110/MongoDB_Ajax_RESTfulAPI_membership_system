@@ -8,7 +8,7 @@ vanilla資料夾下面的RESTful APIi是使用Vanilla JS完成的，vue只有用
 The RESTful API in the "vanilla" directory is implemented using Vanilla JS, with Vue.js being used only for a few specific effects.
 In the "public" directory at the root, the RESTful API is directly written within the Vue.js file.
 
-- Root Directory<br>
+ Root Directory<br>
   ├── models<br>
   │---└── user_shchema.js<br>
   ├── app.js<br>
