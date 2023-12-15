@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 18px;
   font-size: 1em;
-  background-color: #f4f4f4;
+  background-color: #c4bdbd;
 }
 
 h1 {
@@ -126,8 +126,8 @@ div[type="value1"] {
 @media screen and (max-width: 447px) {
   /* 在螢幕寬度小於 447px 時使用以下 CSS 規則 */
     body {
-        font-size: 0.5em;
-        background-color: #fdf07b;
+      font-size: 0.5em;
+      background-color: #fdf07b;
   }
 }
 
