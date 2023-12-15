@@ -42,3 +42,22 @@ Comparatively, it's recommended to use the version in the public directory, wher
 ## RESTfulAPI
 
 ## AJAX fetch
+
+## 實作講解
+#### 首頁
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/33.png)
+
+#### 新增會員
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/35.png)
+
+#### 更新會員資料
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/36.png)
+
+#### 尋找各別單一會員
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/37.png)
+
+#### 尋找所有會員
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/34.png)
+
+#### 刪除會員
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/38.png)
