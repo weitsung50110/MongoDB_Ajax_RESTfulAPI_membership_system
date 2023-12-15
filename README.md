@@ -11,7 +11,7 @@ The public directory in the root contains the RESTful API directly written withi
 Comparatively, it's recommended to use the version in the public directory, where the RESTful API is written inside the vue.js file, making it appear more concise and organized.
 
 
-### - tree structure
+**> Tree structure**<br />
  Root Directory<br>
   ├── models<br>
   │---└── user_shchema.js<br>
