@@ -29,7 +29,12 @@ Comparatively, it's recommended to use the version in the public directory, wher
   │---------└── vue.js<br>
   │---------└── script.js<br>
   │---------└── styles.css<br>
-  
+
+
+**> npm list** <br />
++-- express@4.18.2 <br />
+`-- mongoose@8.0.2 <br />
+
 ## RWD
 
 ## MongoDB
