@@ -56,7 +56,7 @@
 
     <div type="value1">
       <span id="find_OneOrAll_toggle" @click="value1_toggle()">Finding close</span><br/>
-      <span id="find_OneOrAll_txt" v-show="value1_checked">{{ userText }}</span>
+      <span id="find_OneOrAll_txt" v-show="value1_checked" v-html="userText"></span>
     </div>
   </div>
   <!-- 載入vue.js -->

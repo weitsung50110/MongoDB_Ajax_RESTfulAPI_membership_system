@@ -127,7 +127,7 @@ const app = Vue.createApp({
                 console.log('New find_one created:', data);
                 let userText = '';
                 data.forEach((res_user) => {
-                    userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} <br>`;
+                    userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} </br>`;
                 });
                 this.userText = userText;
             })
@@ -147,7 +147,7 @@ const app = Vue.createApp({
                 console.log('New Find created:', data);
                 let userText = '';
                 data.forEach((res_user) => {
-                    userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} <br>`;
+                    userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} </br>`;
                 });
                 this.userText = userText;
             })
