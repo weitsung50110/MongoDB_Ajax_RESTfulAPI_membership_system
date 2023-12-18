@@ -52,6 +52,39 @@ Comparatively, it's recommended to use the version in the public directory, wher
 >{ "_id" : ObjectId("65796b2d69ba374cd3b6dfb8"), "username" : "qwq", "email" : "qwq@vvvvv", "age" : 23, "__v" : 0 } <br />
 { "_id" : ObjectId("6579678969ba374cd3b6dfa3"), "username" : "乎花", "email" : "aa@aaa", "age" : 11, "__v" : 0 }
 
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/47.png)
+
+### - Mongoose
+Mongoose 是一個 Node.js 環境中的 JavaScript 庫，它提供了對 MongoDB 的物件建模工具，讓開發者能夠更方便地在 Node.js 中操作和管理 MongoDB。
+
+Mongoose is a JavaScript library within the Node.js environment that offers an object modeling tool for MongoDB. It enables developers to conveniently operate and manage MongoDB within Node.js.
+
+#### 創建新文檔：
+    User.create(newUser)
+
+#### 查詢文檔：
+-Get個別別用戶
+
+    User.findOne({"_id": req.params.id})
+
+-Get全部用戶
+
+    User.find({})
+    
+#### 更新文檔：
+    User.findOneAndUpdate(
+        { 
+            "_id": req.params.id, //req.params.id 的值，因為它是在路由中 :id 的位置提供的值。
+        }, // 條件，選擇要更新的文檔 
+        { $set: 
+            updatedFields // 使用包含有輸入值的欄位的物件進行更新
+        }, 
+        { new: true } // 選項，返回更新後的文檔
+    )
+
+#### 刪除文檔：
+    User.findOneAndDelete({ _id: req.params.id })
+
 ## RESTfulAPI
 在伺服器端使用 Node.js 的 Express 框架建立 RESTful API，供前端或其他應用程式使用。<br />
 而在前端，是使用 Fetch API 來向伺服器發送請求，從而對這些 RESTful API 進行操作和獲取數據，實現前後端之間的數據交換和通信。
