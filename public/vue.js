@@ -44,7 +44,7 @@ const app = Vue.createApp({
                 body: JSON.stringify(this.formData)
               };
             
-              fetch('/users', requestOptions)
+              await fetch('/users', requestOptions)
                 .then(response => {
                   if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -71,7 +71,7 @@ const app = Vue.createApp({
                 body: JSON.stringify(this.formData2v)
             };
             
-            fetch(`/users/${this.formData2v.userid2v}`, requestOptions2)
+            await fetch(`/users/${this.formData2v.userid2v}`, requestOptions2)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -97,7 +97,7 @@ const app = Vue.createApp({
                 }
             };
         
-            fetch(`/users/${this.deleteId}`, deleteUserOptions)
+            await fetch(`/users/${this.deleteId}`, deleteUserOptions)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -116,7 +116,7 @@ const app = Vue.createApp({
                 });
         },
         async findOneUser() {
-            fetch(`/users/${this.findOneId}`)
+            await fetch(`/users/${this.findOneId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -136,7 +136,7 @@ const app = Vue.createApp({
             });
         },
         async findAllUsers() {
-            fetch('/users')
+            await fetch('/users')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
