@@ -59,19 +59,19 @@ Mongoose 是一個 Node.js 環境中的 JavaScript 庫，它提供了對 MongoDB
 
 Mongoose is a JavaScript library within the Node.js environment that offers an object modeling tool for MongoDB. It enables developers to conveniently operate and manage MongoDB within Node.js.
 
-#### 創建新文檔：
+#### 創建新文檔 Creating New Documents:
     User.create(newUser)
 
-#### 查詢文檔：
--Get個別別用戶
+#### 查詢文檔 Querying Documents:
+-Get個別別用戶 Get Individual User
 
     User.findOne({"_id": req.params.id})
 
--Get全部用戶
+-Get全部用戶 Get All Users
 
     User.find({})
     
-#### 更新文檔：
+#### 更新文檔 Updating Documents:
     User.findOneAndUpdate(
         { 
             "_id": req.params.id, //req.params.id 的值，因為它是在路由中 :id 的位置提供的值。
@@ -82,7 +82,7 @@ Mongoose is a JavaScript library within the Node.js environment that offers an o
         { new: true } // 選項，返回更新後的文檔
     )
 
-#### 刪除文檔：
+#### 刪除文檔 Deleting Documents:
     User.findOneAndDelete({ _id: req.params.id })
 
 ## RESTfulAPI
@@ -92,27 +92,27 @@ Mongoose is a JavaScript library within the Node.js environment that offers an o
 On the server-side, I use the Node.js Express framework to establish RESTful APIs for use by the frontend or other applications.<br />
 On the frontend, I employ the Fetch API to send requests to the server, thereby interacting with and retrieving data from these RESTful APIs, facilitating data exchange and communication between the frontend and backend.
 
--Post新增用戶, POST請求的路由處理<br />
+#### - Post新增用戶, POST請求的路由處理<br />
 For adding a new user via a POST request, handle the route.
 
     app.post('/users', async (req, res)
   
--Put更新用戶<br />
+#### - Put更新用戶<br />
 For updating a user, use a PUT request.
     
     app.put('/users/:id', async function (req, res) 
 
--delete刪除用戶 <br />
+#### - delete刪除用戶 <br />
 For deleting a user, handle the DELETE request.
     
     app.delete('/users/:id', async (req, res)
 
--Get個別別用戶<br />
+#### - Get個別別用戶<br />
 For fetching an individual user, use a GET request for a specific user.
     
     app.get('/users/:id', async function (req, res) 
 
--Get全部用戶<br />
+#### - Get全部用戶<br />
 For fetching all users, use a GET request to retrieve the entire list of users.
     
     app.get('/users', async function (req, res) 
