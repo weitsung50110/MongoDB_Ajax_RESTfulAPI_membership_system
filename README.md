@@ -52,7 +52,7 @@ Comparatively, it's recommended to use the version in the public directory, wher
 >{ "_id" : ObjectId("65796b2d69ba374cd3b6dfb8"), "username" : "qwq", "email" : "qwq@vvvvv", "age" : 23, "__v" : 0 } <br />
 { "_id" : ObjectId("6579678969ba374cd3b6dfa3"), "username" : "乎花", "email" : "aa@aaa", "age" : 11, "__v" : 0 }
 
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/47.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/39.png)
 
 ### - Mongoose
 Mongoose 是一個 Node.js 環境中的 JavaScript 庫，它提供了對 MongoDB 的物件建模工具，讓開發者能夠更方便地在 Node.js 中操作和管理 MongoDB。
