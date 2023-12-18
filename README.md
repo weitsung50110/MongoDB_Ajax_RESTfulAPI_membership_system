@@ -121,7 +121,17 @@ EX:
     },
 
 ## RWD
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/rwd0.gif)
+/* 在螢幕寬度小於 767px 時使用以下 CSS 規則 */<br />
+>@media screen and (max-width: 767px) <br />
+      font-size: 0.8em;<br />
+      background-color: #c1f6fa;
+
+/* 在螢幕寬度小於 447px 時使用以下 CSS 規則 */<br />
+>@media screen and (max-width: 447px) <br />
+      font-size: 0.5em;<br />
+      background-color: #fdf07b;
+>
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/rwd0.gif)
 
 ## 實作講解 Practical demonstration
 ### - 首頁 Homepage
