@@ -20,6 +20,8 @@ Comparatively, it's recommended to use the version in the public directory, wher
   │---└── index.html<br>
   │---└── vue.js<br>
   │---└── styles.css<br>
+  ├── mongoDB_exported_data<br>
+  │---└── exported_data.json<br>
   ├── vanilla<br>
   │---└── models<br>
   │------└── user_shchema.js<br>
