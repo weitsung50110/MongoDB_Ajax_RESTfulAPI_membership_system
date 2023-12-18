@@ -76,7 +76,7 @@ app.put('/users/:id', async function (req, res) {
 
 //delete刪除用戶
 app.delete('/users/:id', async (req, res) => {
-    await User.deleteOne({ _id: req.params.id })
+    await User.findOneAndDelete({ _id: req.params.id })
     .then(delete_user => {
         console.log("delete: "+JSON.stringify(delete_user),"delete_ID: "+req.params.id);
         res.status(201).json(delete_user); // 返回從資料庫返回的新建用戶資料
@@ -88,7 +88,7 @@ app.delete('/users/:id', async (req, res) => {
 
 //Get個別別用戶
 app.get('/users/:id', async function (req, res) {
-    await User.find({"_id": req.params.id})
+    await User.findOne({"_id": req.params.id})
     .then(FindUser => {
         console.log('用戶：', FindUser);
         res.status(201).json(FindUser);
