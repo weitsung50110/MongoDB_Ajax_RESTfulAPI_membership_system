@@ -37,30 +37,107 @@ Comparatively, it's recommended to use the version in the public directory, wher
 +-- express@4.18.2 <br />
 `-- mongoose@8.0.2 <br />
 
+## MongoDB
+    show dbs
+>my_database  0.000GB
+
+    use my_database
+>switched to db my_database
+
+    show collections
+>my_custom_users
+
+    db.my_custom_users.find()
+        
+>{ "_id" : ObjectId("65796b2d69ba374cd3b6dfb8"), "username" : "qwq", "email" : "qwq@vvvvv", "age" : 23, "__v" : 0 } <br />
+{ "_id" : ObjectId("6579678969ba374cd3b6dfa3"), "username" : "乎花", "email" : "aa@aaa", "age" : 11, "__v" : 0 }
+
+## RESTfulAPI
+在伺服器端使用 Node.js 的 Express 框架建立 RESTful API，供前端或其他應用程式使用。<br />
+而在前端，是使用 Fetch API 來向伺服器發送請求，從而對這些 RESTful API 進行操作和獲取數據，實現前後端之間的數據交換和通信。
+
+On the server-side, I use the Node.js Express framework to establish RESTful APIs for use by the frontend or other applications.<br />
+On the frontend, I employ the Fetch API to send requests to the server, thereby interacting with and retrieving data from these RESTful APIs, facilitating data exchange and communication between the frontend and backend.
+
+-Post新增用戶, POST請求的路由處理<br />
+For adding a new user via a POST request, handle the route.
+
+    app.post('/users', async (req, res)
+  
+-Put更新用戶<br />
+For updating a user, use a PUT request.
+    
+    app.put('/users/:id', async function (req, res) 
+
+-delete刪除用戶 <br />
+For deleting a user, handle the DELETE request.
+    
+    app.delete('/users/:id', async (req, res)
+
+-Get個別別用戶<br />
+For fetching an individual user, use a GET request for a specific user.
+    
+    app.get('/users/:id', async function (req, res) 
+
+-Get全部用戶<br />
+For fetching all users, use a GET request to retrieve the entire list of users.
+    
+    app.get('/users', async function (req, res) 
+     
+## AJAX fetch
+fetch() 函式提供了發送網路請求的能力，可以完成類似於AJAX XMLHttpRequest (XHR) 的功能，<br />
+相較於 XHR，fetch() 提供了更簡潔的 API，並支援 Promise 物件作為回傳，使其在處理非同步任務時更方便。
+
+The fetch() function provides the ability to send network requests, performing functions similar to AJAX XMLHttpRequest (XHR). Compared to XHR, fetch() offers a more concise API and supports the use of Promise objects as returns, making it more convenient when handling asynchronous tasks.
+
+EX:
+
+    async addUser() {
+      const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(this.formData)
+        };
+      
+        await fetch('/users', requestOptions)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('New user created:', data);
+            this.errorText = JSON.stringify(data);
+            alert('New user created:' + this.errorText);
+          })
+          .catch(error => {
+            console.error('Error花:', error);
+            this.errorText = 'Post Error花' + JSON.stringify(error);
+            alert(this.errorText);
+          });
+    },
+
 ## RWD
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/rwd0.gif)
 
-## MongoDB
-
-## RESTfulAPI
-
-## AJAX fetch
-
-## 實作講解
-#### 首頁
+## 實作講解 Practical demonstration
+### - 首頁 Homepage
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/33.png)
 
-#### 新增會員
+### - 新增會員 Add Member
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/35.png)
 
-#### 更新會員資料
+### - 更新會員資料 Update Member Information
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/36.png)
 
-#### 尋找各別單一會員
+### - 尋找各別單一會員 Search for Individual Member
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/37.png)
 
-#### 尋找所有會員
+### - 尋找所有會員 Search for All Members
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/34.png)
 
-#### 刪除會員
+### - 刪除會員 Delete Member
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/38.png)
