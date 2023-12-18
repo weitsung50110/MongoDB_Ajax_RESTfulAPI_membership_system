@@ -38,6 +38,7 @@ Comparatively, it's recommended to use the version in the public directory, wher
 `-- mongoose@8.0.2 <br />
 
 ## RWD
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/rwd0.gif)
 
 ## MongoDB
 
