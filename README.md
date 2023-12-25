@@ -7,7 +7,7 @@
 - [Comparison of Implementations in VanillaJS and Vue.js](#comparison-of-implementations-in-vanillajs-and-vuejs)
 - [MongoDB](#mongodb)
 - [Mongoose](#mongoose)
-- [RESTful API](#restful-api)
+- [RESTfulAPI](#RESTfulAPI)
 - [AJAX fetch](#ajax-fetch)
 - [RWD](#rwd)
 - [實作講解 Practical demonstration](#實作講解-practical-demonstration)
@@ -63,7 +63,7 @@ Comparatively, it's recommended to use the version in the public directory, wher
 
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/39.png)
 
-### - Mongoose
+### Mongoose
 Mongoose 是一個 Node.js 環境中的 JavaScript 庫，它提供了對 MongoDB 的物件建模工具，讓開發者能夠更方便地在 Node.js 中操作和管理 MongoDB。
 
 Mongoose is a JavaScript library within the Node.js environment that offers an object modeling tool for MongoDB. It enables developers to conveniently operate and manage MongoDB within Node.js.
