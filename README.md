@@ -11,6 +11,7 @@
 - [AJAX fetch](#ajax-fetch)
 - [RWD](#rwd)
 - [實作講解 Practical demonstration](#實作講解-practical-demonstration)
+- [SCSS](#SCSS)
 
 ### Comparison of Implementations in VanillaJS and Vue.js
 根目錄下的public中是直接把RESTful API寫在vue.js當中，而vanilla資料夾下面的RESTful APIi是使用Vanilla JS完成的，vue只有用在一點特效的部分。
@@ -193,3 +194,14 @@ EX:
 
 ### - 刪除會員 Delete Member
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/38.png)
+
+## SCSS
+步驟 1: 安裝 SCSS 編譯器
+
+    npm install sass
+
+步驟 2: 撰寫 SCSS 文件
+
+步驟 3: 編譯 SCSS 文件為 CSS
+
+    npx sass public/styles.scss public/styles.css
