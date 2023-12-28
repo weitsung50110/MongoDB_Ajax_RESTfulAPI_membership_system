@@ -126,9 +126,9 @@ const app = Vue.createApp({
             .then(data => {
                 console.log('New find_one created:', data);
                 let userText = '';
-                data.forEach((res_user) => {
-                    userText += `_id: ${res_user._id}; username: ${res_user.username}; email: ${res_user.email}; age: ${res_user.age} </br>`;
-                });
+                
+                userText += `_id: ${data._id}; username: ${data.username}; email: ${data.email}; age: ${data.age} </br>`;
+                
                 this.userText = userText;
             })
             .catch(error => {
