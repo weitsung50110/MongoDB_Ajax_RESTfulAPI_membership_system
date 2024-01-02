@@ -48,6 +48,17 @@ Comparatively, it's recommended to use the version in the public directory, wher
 +-- express@4.18.2 <br />
 `-- mongoose@8.0.2 <br />
 
+"sass": "^1.69.5", <br />
+"babel-loader": "^9.1.3", <br />
+"css-loader": "^6.8.1", <br />
+"html-webpack-plugin": "^5.6.0", <br />
+"sass-loader": "^13.3.3", <br />
+"style-loader": "^3.3.3", <br />
+"vue": "^3.3.13", <br />
+"vue-loader": "^16.8.3", <br />
+"webpack": "^5.89.0", <br />
+"webpack-cli": "^5.1.4"
+
 ## MongoDB
     show dbs
 >my_database  0.000GB
@@ -215,7 +226,8 @@ EX:
 - 把index.html中的引入<link rel="stylesheet" href="styles.css">和<!-- <script src="vue.js"></script>註解掉，因為我已經在webpack.config.js設定好，會直接抓取這些檔案。
 - vue.js中要加入import './styles.scss'; // 引入 SCSS 樣式文件
 
-使用以下指令，可以把src/內的檔案合成一個bundle船進去dist/中。
+使用以下指令，可以把src/內的檔案合成一個bundle船進去dist/中。<br/>
+研發時mode選用development，正式上線時選用production。
 
     npx webpack --mode development
 
