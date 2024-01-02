@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const User = require('./models/user_shchema'); // 假設已經建立了User模型
+const User = require('./src/models/user_shchema'); // 假設已經建立了User模型
 
 // 連接至 MongoDB
 mongoose.connect('mongodb://localhost:27017/my_database')
@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/my_database')
 
 // 設置靜態資源目錄（假設HTML檔案存放在 public 目錄下）
 const path = require("path")
-const static_path = path.join(__dirname, "public") //變成絕對路徑 D:\qqq\public，nodejs使用絕對路徑較安全可靠，在 Node 中使用相對路徑進行檔案讀取是很危險的, 建議一律都透過絕對路徑的方式來處理
+const static_path = path.join(__dirname, "dist") //變成絕對路徑 D:\qqq\public，nodejs使用絕對路徑較安全可靠，在 Node 中使用相對路徑進行檔案讀取是很危險的, 建議一律都透過絕對路徑的方式來處理
 app.use(express.static(static_path)) 
 //app.use(express.static('.'));
 app.use(express.urlencoded({ extended: true })); // 處理 URL 編碼的資料

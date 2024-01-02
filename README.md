@@ -12,6 +12,7 @@
 - [RWD](#rwd)
 - [實作講解 Practical demonstration](#實作講解-practical-demonstration)
 - [SCSS](#SCSS)
+- [WebPack 教學](#WebPack-教學)
 
 ### Comparison of Implementations in VanillaJS and Vue.js
 根目錄下的public中是直接把RESTful API寫在vue.js當中，而vanilla資料夾下面的RESTful APIi是使用Vanilla JS完成的，vue只有用在一點特效的部分。
@@ -205,3 +206,19 @@ EX:
 步驟 3: 編譯 SCSS 文件為 CSS
 
     npx sass public/styles.scss public/styles.css
+
+### WebPack 教學
+此專案是有WebPack的版本"WebPack"，<br/>
+使用完WebPack後會把很多檔案合成一個bundle.js，大家可以根據自己的需要進行更改。
+
+- 新增了webpack.config.js檔案
+- 把index.html中的引入<link rel="stylesheet" href="styles.css">和<!-- <script src="vue.js"></script>註解掉，因為我已經在webpack.config.js設定好，會直接抓取這些檔案。
+- vue.js中要加入import './styles.scss'; // 引入 SCSS 樣式文件
+
+使用以下指令，可以把src/內的檔案合成一個bundle船進去dist/中。
+
+    npx webpack --mode development
+
+    npx webpack --mode production
+
+    node .\server.js
