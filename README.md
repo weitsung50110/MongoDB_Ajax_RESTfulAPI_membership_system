@@ -192,6 +192,7 @@ EX:
 ## 實作講解 Practical demonstration
 ### - 首頁 Homepage
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/0.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/9.png)
 
 ### - 新增會員 Add Member
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/3.png)
