@@ -9,11 +9,10 @@
 - [Mongoose](#mongoose)
 - [RESTfulAPI](#RESTfulAPI)
 - [AJAX fetch](#ajax-fetch)
-- [RWD](#rwd)
+- [Bootstrap RWD](#Bootstrap-RWD)
 - [實作講解 Practical demonstration](#實作講解-practical-demonstration)
 - [SCSS](#SCSS)
 - [WebPack 教學](#WebPack-教學)
-- [bootstrap](#bootstrap)
 
 ### Comparison of Implementations in VanillaJS and Vue.js
 根目錄下的public中是直接把RESTful API寫在vue.js當中，而vanilla資料夾下面的RESTful APIi是使用Vanilla JS完成的，vue只有用在一點特效的部分。
@@ -176,7 +175,19 @@ EX:
           });
     },
 
-## RWD
+## Bootstrap RWD
+加入了card，讓CRUD每個功能都有獨立的card，當網頁縮放時，可以達到RWD的效果。
+
+    <div class="container mt-5">
+      
+      <div class="member_system">
+        <h1>Member System Form</h1>
+        
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+
+
 /* 在螢幕寬度小於 767px 時使用以下 CSS 規則 */<br />
 >@media screen and (max-width: 767px) <br />
       font-size: 0.8em;<br />
@@ -236,15 +247,3 @@ EX:
     npx webpack --mode production
 
     node .\server.js
-
-### bootstrap
-加入了card，讓CRUD每個功能都有獨立的card，當網頁縮放時，可以達到RWD的效果。
-
-    <div class="container mt-5">
-      
-      <div class="member_system">
-        <h1>Member System Form</h1>
-        
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
