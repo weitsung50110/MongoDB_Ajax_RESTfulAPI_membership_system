@@ -13,6 +13,7 @@
 - [實作講解 Practical demonstration](#實作講解-practical-demonstration)
 - [SCSS](#SCSS)
 - [WebPack 教學](#WebPack-教學)
+- [bootstrap](#bootstrap)
 
 ### Comparison of Implementations in VanillaJS and Vue.js
 根目錄下的public中是直接把RESTful API寫在vue.js當中，而vanilla資料夾下面的RESTful APIi是使用Vanilla JS完成的，vue只有用在一點特效的部分。
@@ -186,26 +187,26 @@ EX:
       font-size: 0.5em;<br />
       background-color: #fdf07b;
 >
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/rwd0.gif)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/rwd1.gif)
 
 ## 實作講解 Practical demonstration
 ### - 首頁 Homepage
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/33.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/0.png)
 
 ### - 新增會員 Add Member
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/35.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/3.png)
 
 ### - 更新會員資料 Update Member Information
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/36.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/4.png)
 
 ### - 尋找各別單一會員 Search for Individual Member
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/37.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/7.png)
 
 ### - 尋找所有會員 Search for All Members
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/34.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/6.png)
 
 ### - 刪除會員 Delete Member
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/38.png)
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/5.png)
 
 ## SCSS
 步驟 1: 安裝 SCSS 編譯器
@@ -234,3 +235,15 @@ EX:
     npx webpack --mode production
 
     node .\server.js
+
+### bootstrap
+加入了card，讓CRUD每個功能都有獨立的card，當網頁縮放時，可以達到RWD的效果。
+
+    <div class="container mt-5">
+      
+      <div class="member_system">
+        <h1>Member System Form</h1>
+        
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
