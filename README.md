@@ -199,14 +199,14 @@ EX:
 ### - 更新會員資料 Update Member Information
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/4.png)
 
-### - 尋找各別單一會員 Search for Individual Member
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/7.png)
-
-### - 尋找所有會員 Search for All Members
-![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/6.png)
-
 ### - 刪除會員 Delete Member
 ![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/5.png)
+
+### - 尋找各別單一會員 Search for Individual Member
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/8.png)
+
+### - 尋找所有會員 Search for All Members
+![](https://github.com/weitsung50110/MongoDB_Ajax_RESTfulAPI/blob/main/github_images/7.png)
 
 ## SCSS
 步驟 1: 安裝 SCSS 編譯器
